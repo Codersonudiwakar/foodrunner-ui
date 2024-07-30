@@ -2,7 +2,7 @@
 import React from 'react';
 const FoodCategories = () => {
     const categories = [
-        { name: 'Pizza', image: '/path/to/pizza.jpg' },
+        { name: 'Pizza', image: 'https://5.imimg.com/data5/VO/LB/GLADMIN-40426501/ifc-special-burger.png' },
         { name: 'Burger', image: '/path/to/burger.jpg' },
         { name: 'Sushi', image: '/path/to/sushi.jpg' },
     ];

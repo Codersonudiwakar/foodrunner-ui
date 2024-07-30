@@ -7,14 +7,21 @@ import PopularRestaurants from './components/PopularRestaurants';
 import Footer from './components/Footer';
 import SearchCard from './components/SearchCard';
 import MenuCard from './components/MenuCard';
-import Home from './Home';
 
-const App = () => {
+const Home = () => {
     return (
         <>
-           <Home/>
+            <Navbar/>
+            <SearchCard/>
+            <div className="menu-section">
+                <MenuCard/>
+            </div>
+            <HeroSection />
+            <FoodCategories />
+            <PopularRestaurants />
+            <Footer />
         </>
     );
 };
 
-export default App;
+export default Home;
