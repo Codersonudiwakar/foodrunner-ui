@@ -1,21 +1,20 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import backgroundImage from '../components/searchCard.jpeg';
+import SearchBar from './SearchBar';
+import { useState } from 'react';
+import FoodSearchBar from './SearchBar';
+
 
 
 const SearchCard=()=> {
+
   return (
-    <Card className="text-center search-card" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <Card.Header>Featured</Card.Header>
-      <Card.Body>
-        <Card.Title>Special title treatment</Card.Title>
-        <Card.Text>
-          With supporting text below as a natural lead-in to additional content.
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button>
-      </Card.Body>
-      <Card.Footer className="text-muted">2 days ago</Card.Footer>
-    </Card>
+    <div className='Search-Card'>
+       <div> <h2>Sonu kumar diwakar</h2></div>
+       <div><FoodSearchBar/> </div>
+
+    </div>
   );
 }
 

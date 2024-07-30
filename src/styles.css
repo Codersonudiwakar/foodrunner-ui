@@ -1,6 +1,4 @@
-/* src/styles.css */
 
-/* Navbar Styles */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -10,6 +8,24 @@
     color: white;
 }
 
+.Search-Card {
+    background-image: url(components/searchCard.jpeg);
+    background-size: cover; /* or 'contain' depending on your requirement */
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    height: 350px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.Search-Card h2{
+    color: white;
+    font-size: 70px;
+}
+.search-input{
+    font-size: 60px;
+}
 .logo {
     width: 200px;
     height: 70px;
