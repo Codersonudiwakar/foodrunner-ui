@@ -121,22 +121,7 @@
     display: flex;
 
   }
-  
-
 /* HeroSection Styles */
-.hero {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
 
 .search-bar {
     padding: 0.5rem 1rem;

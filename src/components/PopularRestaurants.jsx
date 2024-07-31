@@ -3,7 +3,7 @@ import React from 'react';
 
 const PopularRestaurants = () => {
     const restaurants = [
-        { name: 'Restaurant 1', image: '/path/to/restaurant1.jpg' },
+        { name: 'Restaurant 1', image: 'https://5.imimg.com/data5/VO/LB/GLADMIN-40426501/ifc-special-burger.png' },
         { name: 'Restaurant 2', image: '/path/to/restaurant2.jpg' },
         { name: 'Restaurant 3', image: '/path/to/restaurant3.jpg' },
     ];

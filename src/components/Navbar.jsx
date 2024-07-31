@@ -42,7 +42,7 @@ const TopNavbar =() =>{
 
             Help
             </Nav.Link>
-            <Nav.Link href="#deets"> <FaRegUser /> More deets</Nav.Link>
+            <Nav.Link href="#deets"> <FaRegUser /> Sign in</Nav.Link>
             <Nav.Link  href="#memes">
             <BsCart2 />
             Dank memes
