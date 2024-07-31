@@ -12,7 +12,6 @@ import { useState } from 'react';
 const Home = () => {
     return (
         <>
-            <Navbar/>
             <SearchCard/>
             <div className="menu-section">
                 <MenuCard/>

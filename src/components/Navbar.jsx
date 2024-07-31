@@ -18,7 +18,7 @@ const TopNavbar =() =>{
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
   
       <Container>
-        <Navbar.Brand href="#home"><img src='https://gumlet-images.assettype.com/afaqs%2F2024-04%2Fff7ef11f-51b9-4ab4-801d-627c659f0001%2FSwiggy.png?w=1200&auto=format%2Ccompress&ogImage=true' className='logo'/></Navbar.Brand>
+        <Navbar.Brand href="/"><img src='https://gumlet-images.assettype.com/afaqs%2F2024-04%2Fff7ef11f-51b9-4ab4-801d-627c659f0001%2FSwiggy.png?w=1200&auto=format%2Ccompress&ogImage=true' className='logo'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -40,18 +40,18 @@ const TopNavbar =() =>{
     </div>
           </Nav>
           <Nav>
-          <Nav.Link  href="#memes">
+          <Nav.Link  href="/offer">
             <BiSolidOffer />   Offer
             </Nav.Link>
-            <Nav.Link  href="#memes">
+            <Nav.Link  href="support">
             <TfiHelpAlt />
 
             Help
             </Nav.Link>
-            <Nav.Link href="#deets"> <FaRegUser /> Sign In</Nav.Link>
-            <Nav.Link  href="#memes">
+            <Nav.Link href="/login"> <FaRegUser /> Sign In</Nav.Link>
+            <Nav.Link  href="/cart">
             <BsCart2 />
-            Dank memes
+            Cart
             </Nav.Link>
             
             

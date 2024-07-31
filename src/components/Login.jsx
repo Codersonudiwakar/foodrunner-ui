@@ -1,7 +1,6 @@
 // src/components/LoginPage.js
 
 import React from 'react';
-
 const LoginPage = () => {
   return (
     <div className="login-container">
