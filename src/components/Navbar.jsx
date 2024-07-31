@@ -7,14 +7,16 @@ import { BsCart2 } from "react-icons/bs";
 import { BiSolidOffer } from "react-icons/bi";
 import { GrHelpBook } from "react-icons/gr";
 import { TfiHelpAlt } from "react-icons/tfi";
-
-
-
+import LoginPage from './Login';
+import { useState } from 'react';
+import Button from 'react-bootstrap/esm/Button';
+import Modal from 'react-modal';
 
 
 const TopNavbar =() =>{
   return (
     <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary">
+  
       <Container>
         <Navbar.Brand href="#home"><img src='https://gumlet-images.assettype.com/afaqs%2F2024-04%2Fff7ef11f-51b9-4ab4-801d-627c659f0001%2FSwiggy.png?w=1200&auto=format%2Ccompress&ogImage=true' className='logo'/></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -32,6 +34,10 @@ const TopNavbar =() =>{
                 Separated link<BiSolidOffer /> <GrHelpBook />
               </NavDropdown.Item>
             </NavDropdown> */}
+
+
+<div className="App">
+    </div>
           </Nav>
           <Nav>
           <Nav.Link  href="#memes">
@@ -42,7 +48,7 @@ const TopNavbar =() =>{
 
             Help
             </Nav.Link>
-            <Nav.Link href="#deets"> <FaRegUser /> Sign in</Nav.Link>
+            <Nav.Link href="#deets"> <FaRegUser /> Sign In</Nav.Link>
             <Nav.Link  href="#memes">
             <BsCart2 />
             Dank memes

@@ -6,6 +6,8 @@ import PopularRestaurants from './components/PopularRestaurants';
 import Footer from './components/Footer';
 import SearchCard from './components/SearchCard';
 import MenuCard from './components/MenuCard';
+import LoginPage from './components/Login';
+import { useState } from 'react';
 
 const Home = () => {
     return (
