@@ -3,14 +3,20 @@ import React from 'react';
 
 const PopularRestaurants = () => {
     const restaurants = [
-        { name: 'Restaurant 1', image: 'https://5.imimg.com/data5/VO/LB/GLADMIN-40426501/ifc-special-burger.png' },
-        { name: 'Restaurant 2', image: '/path/to/restaurant2.jpg' },
-        { name: 'Restaurant 3', image: '/path/to/restaurant3.jpg' },
+        { name: 'Restaurant 1', image: 'https://rishikeshcamps.in/wp-content/uploads/2023/05/restaarant.jpg' },
+        { name: 'Restaurant 2', image: 'https://img.traveltriangle.com/blog/wp-content/uploads/2017/10/Toit1.jpg' },
+        { name: 'Restaurant 3', image: 'https://cdn.sortiraparis.com/images/80/100789/834071-too-restaurant-too-hotel-paris-photos-menu-entrees.jpg' },
+        { name: 'Restaurant 4', image: 'https://cdn.sortiraparis.com/images/80/100789/834071-too-restaurant-too-hotel-paris-photos-menu-entrees.jpg' },
+        { name: 'Restaurant 5', image: 'https://cdn.sortiraparis.com/images/80/100789/834071-too-restaurant-too-hotel-paris-photos-menu-entrees.jpg' },
+        
     ];
 
     return (
+        <>
+        <h2>Popular Restaurants</h2>
+       
         <section className="restaurant-section">
-            <h2>Popular Restaurants</h2>
+            
             <div className="restaurants">
                 {restaurants.map((restaurant, index) => (
                     <div className="restaurant-card" key={index}>
@@ -20,6 +26,7 @@ const PopularRestaurants = () => {
                 ))}
             </div>
         </section>
+        </>
     );
 };
 

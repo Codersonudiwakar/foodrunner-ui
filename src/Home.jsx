@@ -8,6 +8,7 @@ import SearchCard from './components/SearchCard';
 import MenuCard from './components/MenuCard';
 import LoginPage from './components/Login';
 import { useState } from 'react';
+import BestFoodList from './components/BestFoodList';
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
                 <MenuCard/>
             </div>
             <FoodCategories />
+            <BestFoodList/>
             <PopularRestaurants />
             <Footer />
         </>

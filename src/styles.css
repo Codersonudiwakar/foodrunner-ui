@@ -6,6 +6,7 @@
     padding: 1rem 2rem;
     background-color: #ff5252;
     color: white;
+    position: fixed;
 }
 
 .Search-Card {
@@ -14,7 +15,7 @@
     background-position: center;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    height: 250px;
+    height: 300px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -155,8 +156,10 @@
 
 /* PopularRestaurants Styles */
 .restaurant-section {
-    padding: 2rem;
-    text-align: center;
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 20px;
 }
 
 .restaurant-section h2 {
@@ -314,3 +317,39 @@ input {
 .signup-container button:hover {
   background-color: #0056b3;
 }
+
+.food-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.food-list {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px;
+  gap: 10px;
+}
+.food-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 0 10px;
+  width: 200px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.food-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.food-card h3 {
+  margin: 10px 0 0;
+  font-size: 18px;
+}
+
