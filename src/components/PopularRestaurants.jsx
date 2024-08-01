@@ -17,7 +17,7 @@ const PopularRestaurants = () => {
        
         <section className="restaurant-section">
             
-            <div className="restaurants">
+            <div className="restaurant-list">
                 {restaurants.map((restaurant, index) => (
                     <div className="restaurant-card" key={index}>
                         <img src={restaurant.image} alt={restaurant.name} />

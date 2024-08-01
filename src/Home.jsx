@@ -17,9 +17,9 @@ const Home = () => {
             <div className="menu-section">
                 <MenuCard/>
             </div>
-            <FoodCategories />
-            <BestFoodList/>
             <PopularRestaurants />
+            {/* <FoodCategories /> */}
+            <BestFoodList/>
             <Footer />
         </>
     );

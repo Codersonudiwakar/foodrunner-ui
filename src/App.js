@@ -6,6 +6,7 @@ import LoginPage from './components/Login';
 import PrivateRoutes from './components/PrivateRoutes';
 import Home from './Home';
 import SignUp from './components/SignUp';
+import RestaurantView from './components/RestaurantView';
 const App = () => {
     return (
         <>
@@ -15,6 +16,7 @@ const App = () => {
            <Route path="/login" element={<LoginPage/>} />
            <Route path="/signup" element={<SignUp/>} />
            <Route path="/" element={<Home/>} />
+           <Route path="/restaurant/:id" element={<RestaurantView/>} />
         </Routes>
           <Routes>
               <Route element={<PrivateRoutes />}>

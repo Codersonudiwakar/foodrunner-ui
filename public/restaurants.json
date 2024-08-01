@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "details": {
+      "name": "The Fancy Restaurant",
+      "address": "123 Main St, City, Country",
+      "phone": "123-456-7890",
+      "cuisine": "Italian",
+      "timings": "10:00 AM - 11:00 PM"
+    },
+    "menu": [
+      { "name": "Pasta", "price": 12 },
+      { "name": "Pizza", "price": 15 }
+    ],
+    "reviews": [
+      { "user": "John Doe", "comment": "Great food!" },
+      { "user": "Jane Smith", "comment": "Excellent service." }
+    ]
+  },
+  {
+    "id": 2,
+    "details": {
+      "name": "The Casual Eatery",
+      "address": "456 Elm St, City, Country",
+      "phone": "987-654-3210",
+      "cuisine": "American",
+      "timings": "11:00 AM - 10:00 PM"
+    },
+    "menu": [
+      { "name": "Burger", "price": 10 },
+      { "name": "Fries", "price": 5 }
+    ],
+    "reviews": [
+      { "user": "Alice Brown", "comment": "Loved the burger!" },
+      { "user": "Bob White", "comment": "Friendly staff." }
+    ]
+  }
+]
