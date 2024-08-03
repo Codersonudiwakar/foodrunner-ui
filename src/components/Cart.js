@@ -22,9 +22,10 @@ const Cart = () => {
         <div>
           {cartItems.map((item, index) => (
             <div key={index} className="cart-item">
+              <img src="path_to_image/vivo_t2_pro_5g.png" alt="vivo T2 Pro 5G"></img>
               <h2>{item.foodName}</h2>
-              <p>Category: {item.foodCategory}</p>
-              <p>Restaurant: {item.foodRestaurant}</p>
+              {/* <p>Category: {item.foodCategory}</p>
+              <p>Restaurant: {item.foodRestaurant}</p> */}
               <p>Price: {item.foodPrice}</p>
               <p>Quantity: {item.quantity}</p>
               <p>Subtotal: {item.foodPrice * item.quantity}</p>

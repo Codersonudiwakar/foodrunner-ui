@@ -6,7 +6,7 @@ const foodData = [
     foodId: 123,
     foodName: "Burger",
     foodCategory: "Fast Food",
-    foodPrice: "$5.99",
+    foodPrice: "5.99",
     foodRestaurant: "FoodRunner"
   },
   {
