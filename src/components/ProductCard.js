@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
 
 const ProductCard = ({ food }) => {
   const [cart, setCart] = useState({
-    quantity: 0,
+    quantity: 1,
     foodId: '',
     foodName: '',
     foodCategory: '',
@@ -70,11 +71,12 @@ const ProductCard = ({ food }) => {
 
     // Save the updated cart back to session storage
     sessionStorage.setItem('cart', JSON.stringify(existingCart));
+    toast.success(cart.quantity+' Product added in cart successfully', { autoClose: 5000 });
 
     // Reset quantity in local state after adding to cart
     setCart(prevCart => ({
       ...prevCart,
-      quantity: 0,
+      quantity:1,
     }));
   };
 
@@ -91,10 +93,11 @@ const ProductCard = ({ food }) => {
         <button className="quantity-btn decrease" onClick={decrease}>-</button>
         <span className="quantity-display">{cart.quantity}</span>
         <button className="quantity-btn increase" onClick={increase}>+</button>
-      </div>
-      <div>
+        <div className='btn-add-cart'>
         <button onClick={addToCart}>Add to Cart</button>
       </div>
+      </div>
+      
     </div>
   );
 };

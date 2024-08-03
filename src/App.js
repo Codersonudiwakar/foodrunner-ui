@@ -8,15 +8,20 @@ import Home from './Home';
 import SignUp from './components/SignUp';
 import RestaurantView from './components/RestaurantView';
 import FoodList from './components/FoodList';
+import Cart from './components/Cart';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
     return (
         <>
         <BrowserRouter>
         <Navbar/>
+        <ToastContainer position="top-right" />
         <Routes>
            <Route path="/login" element={<LoginPage/>} />
            <Route path="/signup" element={<SignUp/>} />
            <Route path="/" element={<FoodList/>} />
+           <Route path="/cart" element={<Cart/>} />
            {/* <Route path="/restaurant/:id" element={<RestaurantView/>} /> */}
         </Routes>
           <Routes>
