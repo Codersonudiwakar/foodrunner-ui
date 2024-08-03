@@ -7,7 +7,7 @@ import PrivateRoutes from './components/PrivateRoutes';
 import Home from './Home';
 import SignUp from './components/SignUp';
 import RestaurantView from './components/RestaurantView';
-import FoodList from './components/ProductCard';
+import FoodList from './components/FoodList';
 const App = () => {
     return (
         <>

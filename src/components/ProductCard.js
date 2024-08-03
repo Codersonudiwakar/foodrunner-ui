@@ -1,79 +1,102 @@
-import React from 'react';
-import QuantityButton from './QuantityButton';
+import React, { useState, useEffect } from 'react';
 
-const foodData = [
-  {
-    "foodId": 123,
-    "foodName": "Burger",
-    "foodCategory": "Fast Food",
-    "foodPrice": "$5.99",
-    "foodRestaurant": "FoodRunner"
-  },
+const ProductCard = ({ food }) => {
+  const [cart, setCart] = useState({
+    quantity: 0,
+    foodId: '',
+    foodName: '',
+    foodCategory: '',
+    foodPrice: '',
+    foodRestaurant: '',
+  });
 
-  {
-    "foodId": 456,
-    "foodName": "Caesar Salad",
-    "foodCategory": "Salad",
-    "foodPrice": "$7.50",
-    "foodRestaurant": "Green Eats"
-  },
+  useEffect(() => {
+    if (food) {
+      setCart(prevCart => ({
+        ...prevCart,
+        foodId: food.foodId,
+        foodName: food.foodName,
+        foodCategory: food.foodCategory,
+        foodPrice: food.foodPrice,
+        foodRestaurant: food.foodRestaurant,
+      }));
+    }
+  }, [food]);
 
-  {
-    "foodId": 789,
-    "foodName": "Pepperoni Pizza",
-    "foodCategory": "Italian",
-    "foodPrice": "$12.99",
-    "foodRestaurant": "Pizza Palace"
-  },
-
-  {
-    "foodId": 101,
-    "foodName": "Sushi Roll",
-    "foodCategory": "Japanese",
-    "foodPrice": "$8.75",
-    "foodRestaurant": "Sushi Express"
-  },
-
-  {
-    "foodId": 202,
-    "foodName": "Chicken Tacos",
-    "foodCategory": "Mexican",
-    "foodPrice": "$6.50",
-    "foodRestaurant": "Taco Fiesta"
+  if (!food) {
+    console.error("Food data is undefined or null");
+    return null;
   }
-];
 
+  console.log("Food data inside ProductCard:", food);
 
-const ProductCard = ({ food }) => (
+  const increase = () => {
+    setCart(prevCart => ({
+      ...prevCart,
+      quantity: prevCart.quantity + 1
+    }));
+  };
 
-  
-  <div className="product-card">
-    <img src="https://example.com/image.jpg" alt={food.name} className="product-image" />
-    <div className="product-details">
-      <h2>{food.name} ({food.color}, {food.storage})</h2>
-      <div className="rating">
-        <span className="rating-value">{food.rating}</span>
-        <span className="ratings-count">{food.ratingsCount} Ratings & {food.reviewsCount} Reviews</span>
+  const decrease = () => {
+    setCart(prevCart => ({
+      ...prevCart,
+      quantity: prevCart.quantity > 0 ? prevCart.quantity - 1 : 0
+    }));
+  };
+
+  const addToCart = () => {
+    const updatedCart = {
+      ...cart,
+      foodId: food.foodId,
+      foodName: food.foodName,
+      foodCategory: food.foodCategory,
+      foodPrice: food.foodPrice,
+      foodRestaurant: food.foodRestaurant,
+    };
+
+    // Retrieve existing cart from session storage
+    let existingCart = JSON.parse(sessionStorage.getItem('cart')) || [];
+
+    // Check if the item already exists in the cart
+    const existingItemIndex = existingCart.findIndex(item => item.foodId === food.foodId);
+
+    if (existingItemIndex >= 0) {
+      // Update the quantity of the existing item
+      existingCart[existingItemIndex].quantity += cart.quantity;
+    } else {
+      // Add the new item to the cart
+      existingCart.push(updatedCart);
+    }
+
+    // Save the updated cart back to session storage
+    sessionStorage.setItem('cart', JSON.stringify(existingCart));
+
+    // Reset quantity in local state after adding to cart
+    setCart(prevCart => ({
+      ...prevCart,
+      quantity: 0,
+    }));
+  };
+
+  return (
+    <div className="product-card">
+      <img src="https://example.com/image.jpg" alt={food.foodName} className="product-image" />
+      <div className="product-details">
+        <h2>{food.foodName} ({food.foodCategory}, {food.foodRestaurant})</h2>
+        <div className="price-section">
+          <span className="price">{food.foodPrice}</span>
+        </div>
       </div>
-      <div className="price-section">
-        <span className="price">₹{food.price}</span>
-        <span className="original-price">₹{food.originalPrice}</span>
-        <span className="discount">{food.discount}% off</span>
+      <div className="quantity-button">
+        <button className="quantity-btn decrease" onClick={decrease}>-</button>
+        <span className="quantity-display">{cart.quantity}</span>
+        <button className="quantity-btn increase" onClick={increase}>+</button>
       </div>
-      <div className="delivery">{food.delivery}</div>
-      <div className="exchange-offer">{food.exchangeOffer}</div>
-
+      <div>
+        <button onClick={addToCart}>Add to Cart</button>
+      </div>
     </div>
-    <QuantityButton/>
-  </div>
-);
+  );
+};
 
-const FoodList = () => (
-  <div className="food-list">
-    {foodData.map((food, index) => (
-      <ProductCard key={index} food={food} />
-    ))}
-  </div>
-);
-
-export default FoodList;
+export default ProductCard;
