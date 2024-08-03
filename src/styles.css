@@ -350,7 +350,6 @@ input {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   text-align: center;
 }
-
 .food-card img {
   width: 100%;
   border-radius: 8px;
@@ -361,3 +360,136 @@ input {
   font-size: 18px;
 }
 
+
+
+
+.food-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px auto;
+  width: 10 0%;
+}
+
+.product-card {
+  display: flex;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 20px;
+  width: 90%;
+}
+
+.product-image {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-details h2 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rating-value {
+  background-color: #4caf50;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.ratings-count {
+  color: #777;
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px;
+  color: #555;
+}
+
+.price-section {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: bold;
+  color: #e53935;
+  margin-right: 10px;
+}
+
+.original-price {
+  text-decoration: line-through;
+  color: #777;
+  margin-right: 10px;
+}
+
+.discount {
+  color: #388e3c;
+}
+
+.delivery, .exchange-offer {
+  color: #777;
+  margin-bottom: 5px;
+}
+
+
+.quantity-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.quantity-btn {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.quantity-btn.decrease {
+  border-radius: 15px 0 0 15px;
+}
+
+.quantity-btn.increase {
+  border-radius: 0 15px 15px 0;
+}
+
+.quantity-display {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 16px;
+}

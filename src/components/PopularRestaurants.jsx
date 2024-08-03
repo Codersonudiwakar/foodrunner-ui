@@ -8,7 +8,6 @@ const PopularRestaurants = () => {
         { name: 'Restaurant 3', image: 'https://cdn.sortiraparis.com/images/80/100789/834071-too-restaurant-too-hotel-paris-photos-menu-entrees.jpg' },
         { name: 'Restaurant 4', image: 'https://cdn.sortiraparis.com/images/80/100789/834071-too-restaurant-too-hotel-paris-photos-menu-entrees.jpg' },
         { name: 'Restaurant 5', image: 'https://cdn.sortiraparis.com/images/80/100789/834071-too-restaurant-too-hotel-paris-photos-menu-entrees.jpg' },
-        
     ];
 
     return (
