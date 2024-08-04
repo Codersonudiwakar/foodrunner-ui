@@ -71,7 +71,7 @@ const ProductCard = ({ food }) => {
 
     // Save the updated cart back to session storage
     sessionStorage.setItem('cart', JSON.stringify(existingCart));
-    toast.success(cart.quantity+' Product added in cart successfully', { autoClose: 5000 });
+    toast.success(cart.quantity+' Product added in cart successfully', { autoClose: 1000 });
 
     // Reset quantity in local state after adding to cart
     setCart(prevCart => ({
