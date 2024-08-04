@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import Navbar from './components/Navbar';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import LoginPage from './components/Login';
 import PrivateRoutes from './components/PrivateRoutes';
 import Home from './Home';
@@ -21,9 +21,11 @@ const App = () => {
         <Routes>
            <Route path="/login" element={<LoginPage/>} />
            <Route path="/signup" element={<SignUp/>} />
-           <Route path="/" element={<FoodList/>} />
+           <Route path="/" element={<Home/>} />
            <Route path="/cart" element={<Cart/>} />
            <Route path="/support" element={<ContactUs/>} />
+           <Route path="/:searchKeyword" element={<FoodListWrapper />} />
+
 
            {/* <Route path="/restaurant/:id" element={<RestaurantView/>} /> */}
         </Routes>
@@ -41,6 +43,11 @@ const App = () => {
 
         </>
     );
+};
+
+const FoodListWrapper = () => {
+  const { searchKeyword } = useParams();
+  return <FoodList searchKeyword={searchKeyword} />;
 };
 
 export default App;

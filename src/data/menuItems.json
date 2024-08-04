@@ -1,35 +1,42 @@
 [
-    {
-      "name": "Happy Cheesecake Day",
-      "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/06/brown-rice-dosa-recipe.jpg"
-    },
-    {
-      "name": "Biryani",
-      "image": "https://static.toiimg.com/thumb/53098310.cms?imgsize=579584&width=800&height=800"
-    },
-    {
-      "name": "Pizzas",
-      "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2020/11/pizza-recipe-2.jpg"
-    },
-    {
-      "name": "Burgers",
-      "image": "https://5.imimg.com/data5/VO/LB/GLADMIN-40426501/ifc-special-burger.png"
-    },
-    {
-      "name": "North Indian",
-      "image": "https://1.bp.blogspot.com/-bAr7TPvKLs8/XINpM6F844I/AAAAAAAA6s4/FVEgfbgRlVcJOVxnUjWK9tAKcmUYxLVUwCLcBGAs/s1600/ration-rice-idli.jpg"
-    },
-    {
-      "name": "Chinese",
-      "image": "https://assets.zeezest.com/blogs/PROD_Banner_1663162846668.jpg"
-    },
-    {
-      "name": "Pasta",
-      "image": "https://savaskitchen.com/wp-content/uploads/2024/01/pasta-with-cottage-cheese-sauce-1-500x500.jpg"
-    },
-    {
-      "name": "Salad",
-      "image": "https://assets-jpcust.jwpsrv.com/thumbnails/qSXwlEH3-720.jpg"
-    }
-  ]
-  
+  {
+    "name": "Dosa",
+    "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2023/06/brown-rice-dosa-recipe.jpg",
+    "link": "https://example.com/dosa"
+  },
+  {
+    "name": "Biryani",
+    "image": "https://static.toiimg.com/thumb/53098310.cms?imgsize=579584&width=800&height=800",
+    "link": "https://example.com/biryani"
+  },
+  {
+    "name": "Pizzas",
+    "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2020/11/pizza-recipe-2.jpg",
+    "link": "https://example.com/pizzas"
+  },
+  {
+    "name": "Burgers",
+    "image": "https://5.imimg.com/data5/VO/LB/GLADMIN-40426501/ifc-special-burger.png",
+    "link": "https://example.com/burgers"
+  },
+  {
+    "name": "iddly",
+    "image": "https://1.bp.blogspot.com/-bAr7TPvKLs8/XINpM6F844I/AAAAAAAA6s4/FVEgfbgRlVcJOVxnUjWK9tAKcmUYxLVUwCLcBGAs/s1600/ration-rice-idli.jpg",
+    "link": "/iddly"
+  },
+  {
+    "name": "Chinese",
+    "image": "https://assets.zeezest.com/blogs/PROD_Banner_1663162846668.jpg",
+    "link": "https://example.com/chinese"
+  },
+  {
+    "name": "Pasta",
+    "image": "https://savaskitchen.com/wp-content/uploads/2024/01/pasta-with-cottage-cheese-sauce-1-500x500.jpg",
+    "link": "https://example.com/pasta"
+  },
+  {
+    "name": "Salad",
+    "image": "https://assets-jpcust.jwpsrv.com/thumbnails/qSXwlEH3-720.jpg",
+    "link": "https://example.com/salad"
+  }
+]

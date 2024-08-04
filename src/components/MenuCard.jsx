@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import menuItems from '../data/menuItems.json';
 
 const MenuCard = () => {
@@ -12,8 +13,10 @@ const MenuCard = () => {
     <div className="menu-container">
       {items.map((item, index) => (
         <div className="menu-item" key={index}>
-          <img src={item.image} alt={item.name} />
-          <p>{item.name}</p>
+          <Link to={`/${item.name}`}>
+            <img src={item.image} alt={item.name} />
+            <p>{item.name}</p>
+          </Link>
         </div>
       ))}
     </div>
