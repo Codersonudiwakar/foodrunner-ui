@@ -11,6 +11,7 @@ import FoodList from './components/FoodList';
 import Cart from './components/Cart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { ContactUs } from './components/Contact';
 const App = () => {
     return (
         <>
@@ -22,6 +23,8 @@ const App = () => {
            <Route path="/signup" element={<SignUp/>} />
            <Route path="/" element={<FoodList/>} />
            <Route path="/cart" element={<Cart/>} />
+           <Route path="/support" element={<ContactUs/>} />
+
            {/* <Route path="/restaurant/:id" element={<RestaurantView/>} /> */}
         </Routes>
           <Routes>
