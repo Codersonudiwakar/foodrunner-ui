@@ -12,6 +12,7 @@ import Cart from './components/Cart';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { ContactUs } from './components/Contact';
+import SearchResults from './components/SearchResults';
 const App = () => {
     return (
         <>
@@ -25,6 +26,9 @@ const App = () => {
            <Route path="/cart" element={<Cart/>} />
            <Route path="/support" element={<ContactUs/>} />
            <Route path="/:searchKeyword" element={<FoodListWrapper />} />
+           <Route path="/search-results" element={<SearchResults />} />
+           <Route path="/search-results" component={SearchResults} />
+
 
 
            {/* <Route path="/restaurant/:id" element={<RestaurantView/>} /> */}
