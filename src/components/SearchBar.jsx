@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { myAxios } from '../service/service';
 
 const FoodSearchBar = () => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (query.length > 0) {
-      myAxios.get('/search-food-items', {
+      myAxios.get('/foodRunner/foodItem/search-food-items', {
         params: { keyword: query }
       })
       .then(response => {
@@ -25,7 +25,7 @@ const FoodSearchBar = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      history.push(`/search-results?keyword=${query}`);
+      navigate(`/foodRunner/foodItem/search-results?keyword=${query}`);
     }
   };
 

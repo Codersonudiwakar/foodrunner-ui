@@ -27,11 +27,7 @@ const App = () => {
            <Route path="/support" element={<ContactUs/>} />
            <Route path="/:searchKeyword" element={<FoodListWrapper />} />
            <Route path="/search-results" element={<SearchResults />} />
-           <Route path="/search-results" component={SearchResults} />
-
-
-
-           {/* <Route path="/restaurant/:id" element={<RestaurantView/>} /> */}
+                      {/* <Route path="/restaurant/:id" element={<RestaurantView/>} /> */}
         </Routes>
           <Routes>
               <Route element={<PrivateRoutes />}>
