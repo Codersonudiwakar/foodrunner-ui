@@ -7,7 +7,7 @@ const FoodList = ({ searchKeyword }) => {
 
   useEffect(() => {
     if (searchKeyword) {
-      myAxios.get(`/category/${searchKeyword}`)
+      myAxios.get(`/foodRunner/category/${searchKeyword}`)
         .then(response => {
           setFoodData(response.data);
         })

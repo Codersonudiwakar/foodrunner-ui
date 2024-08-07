@@ -9,7 +9,7 @@ const FoodSearchBar = () => {
 
   useEffect(() => {
     if (query.length > 0) {
-      myAxios.get('/foodRunner/foodItem/search-food-items', {
+      myAxios.get('/foodRunner/search-food-items', {
         params: { keyword: query }
       })
       .then(response => {
@@ -25,8 +25,12 @@ const FoodSearchBar = () => {
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
-      navigate(`/foodRunner/foodItem/search-results?keyword=${query}`);
+      navigate(`/foodRunner/search-results?keyword=${query}`);
     }
+  };
+
+  const handleSuggestionClick = (keyword) => {
+    navigate(`/foodRunner/search-results?keyword=${keyword}`);
   };
 
   return (
@@ -42,7 +46,12 @@ const FoodSearchBar = () => {
       {suggestions.length > 0 && (
         <div className="suggestions-container">
           {suggestions.map((suggestion, index) => (
-            <div key={index} className="suggestion-item">
+            <div 
+              key={index} 
+              className="suggestion-item"
+              onClick={() => handleSuggestionClick(suggestion.foodName)}
+              style={{ cursor: 'pointer' }} // Add pointer cursor to indicate clickable items
+            >
               <strong>Name:</strong> {suggestion.foodName}, 
               <strong>Category:</strong> {suggestion.foodCategory}, 
               <strong>Restaurant:</strong> {suggestion.foodRestaurant}, 

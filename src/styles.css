@@ -8,6 +8,14 @@
     color: white;
     position: fixed;
 }
+a {
+  color: #3498db;  /* Link color */
+  text-decoration: none;  /* Remove underline */
+}
+.menu-item a{
+  text-decoration: none;  /* Remove underline */
+
+}
 
 .Search-Card {
     background-image: url(components/searchCard.jpeg);
