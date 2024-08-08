@@ -14,7 +14,6 @@ a {
 }
 .menu-item a{
   text-decoration: none;  /* Remove underline */
-
 }
 
 .Search-Card {
@@ -711,4 +710,37 @@ textarea:focus {
 .toast-container .Toastify__toast--error {
   background: #f44336;
 }
+
+
+/* src/CartPage.css */
+.cart-page {
+  display: flex;
+  justify-content: space-between; /* or space-around, space-evenly depending on spacing needs */
+  padding: 20px;
+}
+
+.cart-left, .cart-right {
+  width: 48%; /* Adjust as needed, e.g., 50% or other percentages */
+  background-color: #f5f5f5; /* Optional: for visual separation */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-left {
+  width: 55%; /* Adjust as needed, e.g., 50% or other percentages */
+  background-color: #f5f5f5; /* Optional: for visual separation */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-right {
+  width: 40%; /* Adjust as needed, e.g., 50% or other percentages */
+  background-color: #f5f5f5; /* Optional: for visual separation */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 
