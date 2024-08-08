@@ -1,21 +1,38 @@
 import React, { useState } from 'react';
+import { myAxios } from '../service/service';
 
 const Payment = () => {
     const [paymentType, setPaymentType] = useState('');
+    const [upiId, setUpiId] = useState('');
     const [isProcessing, setIsProcessing] = useState(false);
     const [paymentProcessed, setPaymentProcessed] = useState(false);
+    const [paymentDetails, setPaymentDetails] = useState(null);
 
     const handlePaymentTypeChange = (event) => {
         setPaymentType(event.target.value);
     };
 
-    const handleContinue = () => {
+    const handleContinue = async () => {
         if (paymentType) {
             setIsProcessing(true);
-            // Simulate payment processing delay
-            setTimeout(() => {
-                setPaymentProcessed(true);
-                setIsProcessing(false);
+            setTimeout(async () => {
+                try {
+                    // Save the payment details to the /foodRunner/cart endpoint
+                    const response = await myAxios.post('/foodRunner/cart', paymentData);
+                    console.log(paymentData);
+
+                    if (response.status === 200) {
+                        setPaymentDetails(paymentData);
+                        setPaymentProcessed(true);
+                    } else {
+                        alert('Failed to save payment details.');
+                    }
+                } catch (error) {
+                    console.error('Error saving payment details:', error);
+                    alert('Failed to save payment details.');
+                } finally {
+                    setIsProcessing(false);
+                }
             }, 2000);
         } else {
             alert('Please select a payment method.');
@@ -26,15 +43,6 @@ const Payment = () => {
         <div>
             <h2>Select Payment Method</h2>
             <div>
-                <label>
-                    <input 
-                        type="radio" 
-                        value="card" 
-                        checked={paymentType === 'card'} 
-                        onChange={handlePaymentTypeChange} 
-                    />
-                    Card
-                </label>
                 <label>
                     <input 
                         type="radio" 
@@ -56,23 +64,16 @@ const Payment = () => {
             </div>
 
             <div>
-                {paymentType === 'card' && (
-                    <div>
-                        <h3>Card Payment</h3>
-                        <label>Card Number:</label>
-                        <input type="text" placeholder="Enter your card number" />
-                        <label>Expiry Date:</label>
-                        <input type="text" placeholder="MM/YY" />
-                        <label>CVV:</label>
-                        <input type="text" placeholder="CVV" />
-                    </div>
-                )}
-
                 {paymentType === 'upi' && (
                     <div>
                         <h3>UPI Payment</h3>
                         <label>UPI ID:</label>
-                        <input type="text" placeholder="Enter your UPI ID" />
+                        <input 
+                            type="text" 
+                            placeholder="Enter your UPI ID" 
+                            value={upiId}
+                            onChange={(e) => setUpiId(e.target.value)}
+                        />
                     </div>
                 )}
 
@@ -90,10 +91,11 @@ const Payment = () => {
                 </button>
             )}
 
-            {paymentProcessed && (
+            {paymentProcessed && paymentDetails && (
                 <div>
                     <h3>Payment Successful!</h3>
                     <p>Your payment was processed successfully using {paymentType.toUpperCase()}.</p>
+                    <pre>{JSON.stringify(paymentDetails, null, 2)}</pre> {/* Display the payment details as JSON */}
                 </div>
             )}
         </div>
